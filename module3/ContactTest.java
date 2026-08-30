@@ -36,4 +36,10 @@ public class ContactTest {
         Contact c = new Contact("Alan Turing", "555-0001");
         assertTrue(c.toString().contains("555-0001"));
     }
+
+    @Test
+    void getPhone_returnsExactString_notTranformed() {
+        Contact c = new Contact("Nikki P", "1-555-666-7777");
+        assertEquals("1-555-666-7777", c.getPhone());
+    }
 }
